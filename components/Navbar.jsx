@@ -1,18 +1,20 @@
-import Link from "next/link";
 import React from "react";
+import Navlink from "./Navlink";
 
 const Navbar = () => {
   return (
     <nav>
       <ul className="flex w-full h-full gap-2">
         <li className="mr-auto">
-          <Link href="/">home</Link>
+          <Navlink href="/">homepage</Navlink>
         </li>
         <li>
-          <Link href="/reviews">reviews</Link>
+          <Navlink href="/reviews">reviews</Navlink>
         </li>
         <li>
-          <Link href="/about">about</Link>
+          <Navlink href="/about" prefetch={false}>
+            about
+          </Navlink>
         </li>
       </ul>
     </nav>
